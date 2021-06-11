@@ -14,25 +14,35 @@
                 <asp:TableRow>
                     <asp:TableCell>Nombre(s): </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtName" runat="server" Text=""></asp:TextBox>
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                              ControlToValidate="txtName"
+                              ErrorMessage="Este campo es obligatorio!!"
+                              ForeColor="Red">
+                        </asp:RequiredFieldValidator>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>Primer apellido: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtLastName1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtLastName1" runat="server" Text=""></asp:TextBox>
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                              ControlToValidate="txtLastName1"
+                              ErrorMessage="Este campo es obligatorio!!"
+                              ForeColor="Red">
+                        </asp:RequiredFieldValidator>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>Segundo apellido: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtLastName2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtLastName2" runat="server" Text=""></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>Fecha de nacimiento: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtBirth" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtBirth" runat="server" Text=""></asp:TextBox>
                         <asp:ImageButton ID="miniCalendar" runat="server" ImageAlign="AbsBottom" OnClick="miniCalendar_Click" ImageUrl='~/calendar.jpg' Height="25px" />
                         <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
                     </asp:TableCell>
@@ -49,44 +59,21 @@
                 <asp:TableRow>
                     <asp:TableCell>Estado de nacimiento: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:DropDownList ID="DropDownState" runat="server">
-                            <asp:ListItem>Aguascalientes</asp:ListItem>
-                            <asp:ListItem>Baja California Norte</asp:ListItem>
-                            <asp:ListItem>Baja California Sur</asp:ListItem>
-                            <asp:ListItem>Campeche</asp:ListItem>
-                            <asp:ListItem>Chiapas</asp:ListItem>
-                            <asp:ListItem>Chihuahua</asp:ListItem>
-                            <asp:ListItem>Ciudad de México</asp:ListItem>
-                            <asp:ListItem>Coahuila</asp:ListItem>
-                            <asp:ListItem>Colima</asp:ListItem>
-                            <asp:ListItem>Durango</asp:ListItem>
-                            <asp:ListItem>Guanajuato</asp:ListItem>
-                            <asp:ListItem>Guerrero</asp:ListItem>
-                            <asp:ListItem>Hidalgo</asp:ListItem>
-                            <asp:ListItem>Jalisco</asp:ListItem>
-                            <asp:ListItem>Estado de México</asp:ListItem>
-                            <asp:ListItem>Michoacán</asp:ListItem>
-                            <asp:ListItem>Morelos</asp:ListItem>
-                            <asp:ListItem>Nayarit</asp:ListItem>
-                            <asp:ListItem>Nuevo León</asp:ListItem>
-                            <asp:ListItem>Oaxaca</asp:ListItem>
-                            <asp:ListItem>Puebla</asp:ListItem>
-                            <asp:ListItem>Querétaro</asp:ListItem>
-                            <asp:ListItem>Quintana Roo</asp:ListItem>
-                            <asp:ListItem>San Luis Potosí</asp:ListItem>
-                            <asp:ListItem>Sinaloa</asp:ListItem>
-                            <asp:ListItem>Sonora</asp:ListItem>
-                            <asp:ListItem>Tabasco</asp:ListItem>
-                            <asp:ListItem>Tamaulipas</asp:ListItem>
-                            <asp:ListItem>Tlaxcala</asp:ListItem>
-                            <asp:ListItem>Veracruz</asp:ListItem>
-                            <asp:ListItem>Yucatán</asp:ListItem>
-                            <asp:ListItem>Zacatecas</asp:ListItem>
-                        </asp:DropDownList>           
+                        <asp:DropDownList ID="DropDownStates" runat="server"></asp:DropDownList>
                     </asp:TableCell>
                 </asp:TableRow>
-                
+                <asp:TableRow>
+                    <asp:TableCell ColumnSpan="2" HorizontalAlign="Center">
+                        <asp:Button ID="btnSend" runat="server" Text="Obtener CURP y RFC!!" OnClick="btnSend_click"/>
+                    </asp:TableCell>
+                </asp:TableRow>
             </asp:Table>
+        </div>
+        <br />
+        <div style="margin-left: auto; margin-right: auto; text-align:center;">
+            <asp:Label ID="labelCurp" runat="server" Text="" ></asp:Label>
+            <br />
+            <asp:Label ID="labelRFC" runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>
