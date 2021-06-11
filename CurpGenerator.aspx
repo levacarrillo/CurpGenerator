@@ -14,7 +14,7 @@
                 <asp:TableRow>
                     <asp:TableCell>Nombre(s): </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtName" runat="server" Text=""></asp:TextBox>
+                        <asp:TextBox ID="txtName" runat="server" Text="CONCEPCION"></asp:TextBox>
                         <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                               ControlToValidate="txtName"
                               ErrorMessage="Este campo es obligatorio!!"
@@ -25,7 +25,7 @@
                 <asp:TableRow>
                     <asp:TableCell>Primer apellido: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtLastName1" runat="server" Text=""></asp:TextBox>
+                        <asp:TextBox ID="txtLastName1" runat="server" Text="SALGADO"></asp:TextBox>
                         <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
                               ControlToValidate="txtLastName1"
                               ErrorMessage="Este campo es obligatorio!!"
@@ -36,13 +36,13 @@
                 <asp:TableRow>
                     <asp:TableCell>Segundo apellido: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtLastName2" runat="server" Text=""></asp:TextBox>
+                        <asp:TextBox ID="txtLastName2" runat="server" Text="BRISEÑO"></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>Fecha de nacimiento: </asp:TableCell> 
                     <asp:TableCell>
-                        <asp:TextBox ID="txtBirth" runat="server" Text=""></asp:TextBox>
+                        <asp:TextBox ID="txtBirth" runat="server" Text="26/06/1956"></asp:TextBox>
                         <asp:ImageButton ID="miniCalendar" runat="server" ImageAlign="AbsBottom" OnClick="miniCalendar_Click" ImageUrl='~/calendar.jpg' Height="25px" />
                         <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
                     </asp:TableCell>
